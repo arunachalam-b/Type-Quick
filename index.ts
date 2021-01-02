@@ -22,6 +22,7 @@ while(showNext < Number(attempts)) {
     response.wrong++;
     console.log('\x1b[31m%s\x1b[0m', '✖');
   }
+  console.log('\x1b[0m%s\x1b[32m%s\x1b[0m%s\x1b[31m%s\x1b[0m', 'Correct: ', response.correct, ' Wrong: ', response.wrong);
   showNext++;
 }
 

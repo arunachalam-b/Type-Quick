@@ -11,6 +11,7 @@ let countChars = characters.length;
 let response = {correct: 0, wrong: 0};
 
 let showNext = 0;
+let time = [];
 
 while(showNext < Number(attempts)) {
   const random = Math.floor(Math.random() * countChars);
@@ -18,10 +19,14 @@ while(showNext < Number(attempts)) {
   console.log("Type: ", characters[random]);
   
   console.time((showNext+1).toString());
+  let startTime = Date.now();
   
   const enteredInput = prompt("");
   
   console.timeLog((showNext+1).toString());
+  let endTime = Date.now();
+
+  time.push((endTime-startTime)/1000 + " seconds");
 
   if (enteredInput == characters[random]) {
     response.correct++;
@@ -35,5 +40,9 @@ while(showNext < Number(attempts)) {
 }
 
 console.log(`You have ${response.correct} Correct response and ${response.wrong} Wrong response`);
+
+time.map((gap, index) => {
+  console.log((index+1), gap);
+});
 
 console.log("Thank You");

@@ -14,8 +14,15 @@ let showNext = 0;
 
 while(showNext < Number(attempts)) {
   const random = Math.floor(Math.random() * countChars);
+  
   console.log("Type: ", characters[random]);
+  
+  console.time((showNext+1).toString());
+  
   const enteredInput = prompt("");
+  
+  console.timeLog((showNext+1).toString());
+
   if (enteredInput == characters[random]) {
     response.correct++;
     console.log(`${GREEN}%s${WHITE}`, '✔');

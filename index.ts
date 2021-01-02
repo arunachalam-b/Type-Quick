@@ -1,4 +1,5 @@
 import Prompt from 'prompt-sync';
+import { GREEN, RED, WHITE } from './types';
 
 const prompt = Prompt();
 
@@ -17,12 +18,12 @@ while(showNext < Number(attempts)) {
   const enteredInput = prompt("");
   if (enteredInput == characters[random]) {
     response.correct++;
-    console.log('\x1b[32m%s\x1b[0m', '✔');
+    console.log(`${GREEN}%s${WHITE}`, '✔');
   } else {
     response.wrong++;
-    console.log('\x1b[31m%s\x1b[0m', '✖');
+    console.log(`${RED}%s${WHITE}`, '✖');
   }
-  console.log('\x1b[0m%s\x1b[32m%s\x1b[0m%s\x1b[31m%s\x1b[0m', 'Correct: ', response.correct, ' Wrong: ', response.wrong);
+  console.log(`${WHITE}%s${GREEN}%s${WHITE}%s${RED}%s${WHITE}`, 'Correct: ', response.correct, ' Wrong: ', response.wrong);
   showNext++;
 }
 

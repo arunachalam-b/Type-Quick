@@ -6,5 +6,3 @@
 ### Project Setup
 *  `yarn install / npm install`
 *  `yarn start / npm start`
-
-##### by Arunachalam B

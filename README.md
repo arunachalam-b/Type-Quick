@@ -1,8 +1,8 @@
 # Type-Quick
 
--   Nodejs Verison : 14.15.4
--   NPM version : 6.14.10
+-   Nodejs Verison : 18.16.0
+-   NPM version : 9.5.1
 
 ### Project Setup
-*  `yarn install / npm install`
-*  `yarn start / npm start`
+*  `npm install`
+*  `npm start`

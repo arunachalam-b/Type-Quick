@@ -58,7 +58,7 @@ function fastTypeCharacters() {
     
     const enteredInput = prompt("");
     
-    console.timeLog((showNext+1).toString());
+    console.timeEnd((showNext+1).toString());
     let endTime = Date.now();
   
     responseObj.time = (endTime-startTime)/1000 + " seconds";
@@ -108,7 +108,7 @@ function fastTypeWords() {
     
     const enteredInput = prompt("");
     
-    console.timeLog((showNext+1).toString());
+    console.timeEnd((showNext+1).toString());
     let endTime = Date.now();
   
     responseObj.time = (endTime-startTime)/1000 + " seconds";
